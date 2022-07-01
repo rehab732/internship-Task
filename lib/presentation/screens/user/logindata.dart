@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
-  final TextEditingController name;
-  final TextEditingController phone;
+class Homee extends StatelessWidget {
+  final TextEditingController pass;
   final TextEditingController mail;
-  Home({
+  Homee({
     required this.mail,
-    required this.name,
-    required this.phone,
+    required this.pass,
   });
   @override
   Widget build(BuildContext context) {
@@ -22,13 +20,7 @@ class Home extends StatelessWidget {
       ),
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(
-            "Name : $name ",
-            style: TextStyle(color: Color(0xFF005DA3), fontSize: 20),
-          ),
-          SizedBox(
-            height: 10,
-          ),
+          
           Text(
             "Email : $mail ",
             style: TextStyle(color: Color(0xFF005DA3), fontSize: 20),
@@ -37,7 +29,7 @@ class Home extends StatelessWidget {
             height: 10,
           ),
           Text(
-            "Phone : $phone  ",
+            "Phone : $pass  ",
             style: TextStyle(color: Color(0xFF005DA3), fontSize: 20),
           ),
           SizedBox(

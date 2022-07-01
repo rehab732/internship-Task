@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../widget/shared_widget.dart';
+import 'logindata.dart';
 
 class Login extends StatelessWidget {
   var emailController = TextEditingController();
@@ -94,9 +95,12 @@ class Login extends StatelessWidget {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-                                  if (formkey.currentState!.validate()) {
-                                    Navigator.pushNamed(context, "/home");
-                                  }
+                                 Navigator.push(context,
+                                      MaterialPageRoute(builder: (context)=>Homee(
+                                        mail: emailController,
+                                        
+                                        pass:passwordController,
+                                      )));
                                 },
                                 child: Text(
                                   "LOGIN",

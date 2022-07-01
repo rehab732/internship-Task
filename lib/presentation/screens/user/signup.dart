@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intern_task/presentation/screens/user/user_data.dart';
 
 import '../../widget/shared_widget.dart';
 
@@ -158,7 +159,7 @@ class SignUp extends StatelessWidget {
                                   ElevatedButton(
                                     onPressed: () {
                                       if (formkey.currentState!.validate()) {
-                                        Navigator.pushNamed(context, "/home");
+                                        Navigator.pushNamed(context, "/login");
                                       }
                                     },
                                     child: Text(
@@ -185,9 +186,12 @@ class SignUp extends StatelessWidget {
                                   ),
                                   ElevatedButton(
                                     onPressed: () {
-                                      if (formkey.currentState!.validate()) {
-                                        Navigator.pushNamed(context, "/signup");
-                                      }
+                                      Navigator.push(context,
+                                      MaterialPageRoute(builder: (context)=>Home(
+                                        mail: emailController,
+                                        name: nameController,
+                                        phone:phoneController,
+                                      )));
                                     },
                                     child: Text(
                                       "Register",
